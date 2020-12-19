@@ -25,7 +25,11 @@ class Calculator {
       this.clear();
     }
     if (number === "." && this.currentOperand.includes(".")) return;
-    this.currentOperand = this.currentOperand.toString() + number.toString();
+    if (this.currentOperand === "0" && number !== ".") {
+      this.currentOperand = number;
+    } else {
+      this.currentOperand = this.currentOperand.toString() + number.toString();
+    }
   }
 
   choseOperation(operation) {
@@ -38,7 +42,6 @@ class Calculator {
       this.compute();
     }
     if (this.currentOperand === Infinity || isNaN(this.currentOperand)) return;
-
     this.operation = operation;
     this.previousOperand = this.currentOperand;
     this.currentOperand = "";
@@ -71,7 +74,6 @@ class Calculator {
     } else {
       this.currentOperand = computation;
     }
-
     this.previousOperand = "";
     this.operation = null;
     this.isComputed = true;
