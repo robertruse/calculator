@@ -1,6 +1,6 @@
 # Calculator
 
-In this project I built a minimal calculator using oject-oriented programming concepts. I used HTML5, CSS3 and modern JavaScript syntax.
+In this project I built a minimal calculator utilizing object-oriented programming concepts. I used HTML5, CSS3 and modern JavaScript syntax.
 
 ## Technologies
 
