@@ -21,7 +21,7 @@ class Calculator {
 
   appendNumber(number) {
     if (this.currentOperand.toString().length >= 42) return;
-    if (this.isComputed === true) {
+    if (this.isComputed === true || this.currentOperand === "Undefined") {
       this.clear();
     }
     if (number === "." && this.currentOperand.includes(".")) return;
@@ -33,6 +33,7 @@ class Calculator {
     if (this.previousOperand !== "") {
       this.compute();
     }
+    if (this.currentOperand === Infinity || isNaN(this.currentOperand)) return;
     this.operation = operation;
     this.previousOperand = this.currentOperand;
     this.currentOperand = "";
@@ -60,7 +61,12 @@ class Calculator {
       default:
         return;
     }
-    this.currentOperand = computation;
+    if (isNaN(computation)) {
+      this.currentOperand = "Undefined";
+    } else {
+      this.currentOperand = computation;
+    }
+
     this.previousOperand = "";
     this.operation = null;
     this.isComputed = true;
