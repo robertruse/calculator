@@ -13,18 +13,18 @@ class Calculator {
   }
 
   delete() {
-    if (this.currentOperand === Infinity) return;
-    if (this.isComputed === true && this.currentOperand !== "") return;
+    if (this.isComputed === true) {
+      this.clear();
+    }
     this.currentOperand = this.currentOperand.toString().slice(0, -1);
   }
 
   appendNumber(number) {
     if (this.currentOperand.toString().length >= 42) return;
-    if (this.currentOperand === Infinity) return;
-    if (number === "." && this.currentOperand.includes(".")) return;
     if (this.isComputed === true) {
       this.clear();
     }
+    if (number === "." && this.currentOperand.includes(".")) return;
     this.currentOperand = this.currentOperand.toString() + number.toString();
   }
 
