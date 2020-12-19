@@ -29,11 +29,16 @@ class Calculator {
   }
 
   choseOperation(operation) {
+    if (this.currentOperand === "" && operation == "-") {
+      this.appendNumber(operation);
+      return;
+    }
     if (this.currentOperand === "") return;
     if (this.previousOperand !== "") {
       this.compute();
     }
     if (this.currentOperand === Infinity || isNaN(this.currentOperand)) return;
+
     this.operation = operation;
     this.previousOperand = this.currentOperand;
     this.currentOperand = "";
