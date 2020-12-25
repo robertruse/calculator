@@ -240,3 +240,41 @@ hr {
     grid-template-rows: repeat(5, 50px);
   }
 }
+
+@media (min-width: 1920px) {
+  .container {
+    left: 65px;
+    padding: 65px 0;
+  }
+
+  .input {
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(5, 100px);
+    right: 130px;
+    gap: 5px;
+    padding: 25px;
+  }
+
+  button {
+    font-size: 2rem;
+  }
+
+  .output {
+    width: 400px;
+    height: 570px;
+    right: 65px;
+    gap: 10px;
+  }
+
+  .previous-operand {
+    font-size: 2.5rem;
+  }
+
+  .current-operand {
+    font-size: 3.4rem;
+  }
+
+  hr {
+    height: 2px;
+  }
+}
