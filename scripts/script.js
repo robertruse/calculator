@@ -69,11 +69,7 @@ class Calculator {
       default:
         return;
     }
-    if (isNaN(computation)) {
-      this.currentOperand = "Undefined";
-    } else {
-      this.currentOperand = computation;
-    }
+    this.currentOperand = isNaN(computation) ? "Undefined" : computation;
     this.previousOperand = "";
     this.operation = null;
     this.isComputed = true;
