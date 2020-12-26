@@ -243,38 +243,31 @@ hr {
 
 @media (min-width: 1920px) {
   .container {
-    left: 65px;
-    padding: 65px 0;
+    left: 55px;
+    padding: 55px 0;
   }
 
   .input {
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(5, 100px);
-    right: 130px;
-    gap: 5px;
-    padding: 25px;
+    grid-template-columns: repeat(4, 88px);
+    grid-template-rows: repeat(5, 88px);
+    right: 110px;
   }
 
   button {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .output {
-    width: 400px;
-    height: 570px;
-    right: 65px;
-    gap: 10px;
+    width: 350px;
+    height: 492px;
+    right: 55px;
   }
 
   .previous-operand {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .current-operand {
-    font-size: 3.4rem;
-  }
-
-  hr {
-    height: 2px;
+    font-size: 3rem;
   }
 }
